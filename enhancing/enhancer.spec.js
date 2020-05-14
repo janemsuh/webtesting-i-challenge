@@ -20,4 +20,8 @@ describe('enhancer unit tests', () => {
         expect(enhancer.fail({ name: 'test', enhancement: 15, durability: 100 })).toEqual({ name: 'test', enhancement: 15, durability: 90 });
         expect(enhancer.fail({ name: 'test', enhancement: 5, durability: 3 })).toEqual({ name: 'test', enhancement: 5, durability: 0 });
     });
+
+    it('repair', () => {
+        expect(enhancer.repair({ name: 'test', enhancement: 10, durability: 15 })).toEqual({ name: 'test', enhancement: 10, durability: 100 });
+    });
 });
