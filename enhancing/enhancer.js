@@ -19,7 +19,7 @@ function fail(item) {
     item.enhancement -= 1;
     item.durability -= 10;
   } else {
-    item.durability -= 5;
+    item.durability -= 10;
   }
   item.enhancement = Math.max(0, item.enhancement);
   item.durability = Math.max(0, item.durability);
